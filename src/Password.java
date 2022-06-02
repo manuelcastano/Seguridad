@@ -13,8 +13,11 @@ import javax.crypto.spec.PBEKeySpec;
 
 public class Password {
 
+	
+	//Generamos el hash de la contraseña
 	public static String generateStrongPasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
+		//numero de iteraciones de la funcion
         int iterations = 1000;
         char[] chars = password.toCharArray();
         byte[] salt = getSalt();
@@ -26,7 +29,7 @@ public class Password {
         return iterations + ":" + toHex(salt) + ":" + toHex(hash);
     }
 
-    
+    //Generamos una salt random
     private static byte[] getSalt() throws NoSuchAlgorithmException {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
         byte[] salt = new byte[16];
@@ -50,7 +53,7 @@ public class Password {
     
     
     
-    
+    //Validamos la contraseña
     public static boolean validatePassword(String originalPassword, String usuario) throws NoSuchAlgorithmException, InvalidKeySpecException
     {
          try {
@@ -75,6 +78,7 @@ public class Password {
             byte[] salt = fromHex(parts[1]);
             byte[] hash = fromHex(parts[2]);
 
+            //Generamos el hash de la contraseña dada con el salt y numero de interacciones de la original ya guardada en el archivo
             PBEKeySpec spec = new PBEKeySpec(originalPassword.toCharArray(), salt, iterations, hash.length * 8);
 
             SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
