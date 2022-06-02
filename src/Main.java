@@ -148,7 +148,7 @@ public class Main {
 							pw.println(line);
 							pw.flush();
 						} else {
-							String linea = line.split(",")[0] + ", ";
+							String linea = line.split(",")[0] + ", ,";
 							if(line.split("").length > 2) {
 								linea += line.split(",")[2];
 							}
