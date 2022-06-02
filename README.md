@@ -17,9 +17,9 @@ El backend se encarga del proceso de encriptacion de las contraseñas de lo usua
 ## Conclusiones:
 
 
-Actualmente resulta ser muy practico implementar seguridad en una aplicación o plataforma web.La documentación que utilizamos para realizar la encriptacion en general son bastantes descriptivos y esta bien desarrollada,en muchas áreas del software hay recursos con muy mala documentación que hacen que su implementación sea más difícil, hacer que la seguridad sea fácil de implementar es necesario para que el software sea bien desarrollado.
+- Actualmente resulta ser muy practico implementar seguridad en una aplicación o plataforma web.La documentación que utilizamos para realizar la encriptacion en general son bastantes descriptivos y esta bien desarrollada,en muchas áreas del software hay recursos con muy mala documentación que hacen que su implementación sea más difícil, hacer que la seguridad sea fácil de implementar es necesario para que el software sea bien desarrollado.
 
-Si se tienen acceso al almacenamiento de los datos, con toda la información encriptada, y al código fuente de la aplicación todos los usuarios quedan expuestos. Nos recordó que la seguridad no es solo un aspecto que se implementa en el código, es además una serie de prácticas que rodean el código, sus desarrolladores y sus usuarios.
+- Si se tienen acceso al almacenamiento de los datos, con toda la información encriptada, y al código fuente de la aplicación todos los usuarios quedan expuestos. Nos recordó que la seguridad no es solo un aspecto que se implementa en el código, es además una serie de prácticas que rodean el código, sus desarrolladores y sus usuarios.
 
 
 ## Developed by 🛠️
