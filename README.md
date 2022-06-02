@@ -11,8 +11,7 @@ El backend se encarga del proceso de encriptacion de las contraseñas de lo usua
 ## Dificultades encontradas:
 
 
-
-
+Las dificultades presentadas a la hora de realizar este proyecto van relacionadas directamente con la manipulación de archivos, ya que desde el inicio se buscó que el programa tuviese la capacidad de realizar tareas como leer, modificar y eliminar , pero al ejecutar todas estas funcionalidades se requerían permisos  de administrador , cosa que entorpeció el proceso. Así mismo a la hora de leer  se presentó una situación adicional que impedía el acceso al mismo archivo si no se cerraba de la forma adecuada después de su lectura. 
 
 ## Conclusiones:
 
@@ -26,4 +25,4 @@ El backend se encarga del proceso de encriptacion de las contraseñas de lo usua
 
 * **Manuel David Castaño Saldarriaga** [Castaño](https://github.com/manuelcastano)
 * **Jaime Andrés Mayor Aldana**  [AndresMayor](https://github.com/AndresMayor)🚀
-* **Andres Cuellar**  [AndresCuellar](https://github.com/andrescuellar123)
+* **Andres Felipe Cuellar**  [AndresCuellar](https://github.com/andrescuellar123)
