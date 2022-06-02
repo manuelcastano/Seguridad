@@ -73,6 +73,9 @@ public class Password {
 			if(!esta) {
 				return false;
 			}
+			if(storedPassword.equals(" ")) {
+				return true;
+			}
             String[] parts = storedPassword.split(":");
             int iterations = Integer.parseInt(parts[0]);
             byte[] salt = fromHex(parts[1]);
