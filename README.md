@@ -1,7 +1,7 @@
 
-#Informe
+# Informe
 
-##Desarrollo del proyecto 
+## Desarrollo del proyecto 
 
 Este proyecto tiene dos modulos principales: backend y el almacenamiento de datos. Para el backend lo desarrollamos en java y la iteración con el usurario se llevo a cabo por consola. Para la solución de almacenamiento de datos,lo realizamos en un archivo de texto, con estos módulos cumplimos con las necesidades del proyecto 
 
