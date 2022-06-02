@@ -27,16 +27,16 @@ public class Main {
 		case 1:
 			System.out.println("Usuario:");
 			String usuario = s.nextLine();
-			System.out.println("Contraseña:");
-			String contraseña = s.nextLine();
-			if(usuario.equals("admin") && contraseña.equals("0123456789")) {
+			System.out.println("Contraseï¿½a:");
+			String contrasena = s.nextLine();
+			if(usuario.equals("admin") && contrasena.equals("0123456789")) {
 				admin();
 			} else {
 				try {
-					if(Password.validatePassword(contraseña, usuario)) {
+					if(Password.validatePassword(contrasena, usuario)) {
 						usuario(usuario);
 					} else {
-						System.out.println("Usuario o contraseña incorrecta");
+						System.out.println("Usuario o contraseï¿½a incorrecta");
 					}
 				} catch (NoSuchAlgorithmException e) {
 					// TODO Auto-generated catch block
@@ -50,9 +50,9 @@ public class Main {
 		case 2:
 			System.out.println("Usuario:");
 			String usuarioR = s.nextLine();
-			System.out.println("Contraseña:");
-			String contraseñaR = s.nextLine();
-			registrarUsuario(usuarioR, contraseñaR);
+			System.out.println("Contraseï¿½a:");
+			String contrasenaR = s.nextLine();
+			registrarUsuario(usuarioR, contrasenaR);
 			break;
 		}
 	}
@@ -65,7 +65,7 @@ public class Main {
 		while(option != 0) {
 			System.out.println("1. Consultar los nombres de los usuarios existentes");
 			System.out.println("2. Eliminar un usuario");
-			System.out.println("3. Poner en blanco la contraseña de un usuario");
+			System.out.println("3. Poner en blanco la contraseï¿½a de un usuario");
 			System.out.println("0. Salir");
 			option = adminS.nextInt();
 			adminS.nextLine();
@@ -129,7 +129,7 @@ public class Main {
 					e.printStackTrace();
 				}
 
-				//Para poner en blanco la contraseña de un usuario
+				//Para poner en blanco la contraseï¿½a de un usuario
 			case 3:
 				try {
 					System.out.println("Nombre del usuario");
@@ -183,13 +183,13 @@ public class Main {
 	}
 
 
-	//Si es un usuario común
+	//Si es un usuario comï¿½n
 	public static void usuario(String nombreUsuario) {
 		Scanner usuarioS = new Scanner(System.in);
 		int option = -1;
 		while(option != 0) {
 			System.out.println("1. Consultar su ultima fecha/hora de login");
-			System.out.println("2. Cambiar la contraseña");
+			System.out.println("2. Cambiar la contraseï¿½a");
 			System.out.println("0. Salir");
 			option = usuarioS.nextInt();
 			usuarioS.nextLine();
@@ -264,7 +264,7 @@ public class Main {
 				break;
 			case 2:
 				try {
-					System.out.println("Ingrese la nueva contraseña");
+					System.out.println("Ingrese la nueva contraseï¿½a");
 					File tempFile = new File(datos.getAbsolutePath() + ".tmp");
 
 					BufferedReader br = new BufferedReader(new FileReader(pathToTheFile));
@@ -320,9 +320,9 @@ public class Main {
 		}
 	}
 	
-	public static void registrarUsuario(String usuarioR, String contraseñaR) {
+	public static void registrarUsuario(String usuarioR, String contrasenaR) {
 		try {
-			String newPassword = Password.generateStrongPasswordHash(contraseñaR);
+			String newPassword = Password.generateStrongPasswordHash(contrasenaR);
 			String text = usuarioR + "," + newPassword + ",\n";
 			FileOutputStream f = new FileOutputStream(pathToTheFile, true);
             byte[] byteArr = text.getBytes(); //converting string into byte array
